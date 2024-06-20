@@ -9,7 +9,7 @@
 }
 
 body {
-    margin: 30px;
+    margin: 20px;
     padding: 10px;
     min-height: 100vh;
     font-family: var(--font);
@@ -28,10 +28,10 @@ body {
     width: 120px;
     height: 120px;
     display: block;
-    margin: 80px auto 20px;
+    margin: auto;
     border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
-    outline: 2px solid white;
+/*     outline: 2px solid white; */
 }
 
 #userName {
@@ -107,16 +107,32 @@ body {
     text-align: center;
 
     /*  animation   */
-    overflow: hidden;
+/*     overflow: hidden; */
     background: linear-gradient(90deg, var(--bgColor), var(--accentColor), var(--bgColor));
     /* background-repeat: no-repeat; */
     background-size: 80%;
     animation: animate 15s linear  infinite;
     -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+/*     background-clip: text; */
+/*     -webkit-text-fill-color: rgba(255, 255, 255, 0); */
 }
 
+
+        hr {
+            width: 80%;
+            margin: 20px auto;
+            border: 0;
+            border-top: 2px solid var(--accentColor);
+            transform: scaleX(0);
+            transform-origin: center;
+            animation: hrAnimation 2s ease-in forwards;
+        }
+
+        @keyframes hrAnimation {
+            to {
+                transform: scaleX(1);
+            }
+        }
 
 /*-------------------------animations-----------------------*/
 @keyframes transitionAnimation {
